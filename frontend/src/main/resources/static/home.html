@@ -1,0 +1,10 @@
+<h1>Greeting</h1>
+<div ng-show="authenticated">
+  <div ng-repeat="todo in todos" for="{{todo}}">
+    <h2 class="text-danger">{{todo.title}}</h2>
+    <p class="lead">{{todo.comment}}</p>
+  </div>
+</div>
+<div  ng-show="!authenticated">
+  <p>Login to see your greeting</p>
+</div>

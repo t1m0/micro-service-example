@@ -1,0 +1,9 @@
+._*
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.project
+.settings
+.classpath
+.settings/*
