@@ -1,4 +1,4 @@
-package com.t1m0.exmple.microservice.security;
+package com.t1m0.example.microservice.security;
 
 import java.security.KeyPair;
 
@@ -26,7 +26,7 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
  public JwtAccessTokenConverter jwtAccessTokenConverter() {
   JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
   KeyPair keyPair = new KeyStoreKeyFactory(new ClassPathResource("keystore.jks"), "foobar".toCharArray())
-  .getKeyPair("test");
+    .getKeyPair("test");
   converter.setKeyPair(keyPair);
   return converter;
  }
@@ -34,7 +34,7 @@ public class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdap
  @Override
  public void configure(final ClientDetailsServiceConfigurer clients) throws Exception {
   clients.inMemory().withClient("acme").secret("acmesecret")
-  .authorizedGrantTypes("authorization_code", "refresh_token", "password").scopes("openid");
+    .authorizedGrantTypes("authorization_code", "refresh_token", "password").scopes("openid");
  }
 
  @Override

@@ -1,4 +1,4 @@
-package com.t1m0.exmple.microservice.security;
+package com.t1m0.example.microservice.security;
 
 import java.io.IOException;
 
