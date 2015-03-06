@@ -54,7 +54,7 @@ module.controller('home', function($scope, $http, $log) {
 	$scope.todos = null;
 	$scope.init = function(){
 		$http.get('resource/todo').success(function(data) {
-			$scope.todos = data["_embedded"]["todo"];
+			$scope.todos = data;
 			$log.info($scope.todos);
 		});
 	};
