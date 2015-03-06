@@ -1,25 +1,12 @@
 package com.t1m0.exmple.microservice.resource.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import org.springframework.data.annotation.Id;
 
-import org.hibernate.annotations.GenericGenerator;
-
-@Entity
-@Table(name = "todo")
 public class ToDo {
 
  @Id
- @Column(name = "uuid", unique = true)
- @GeneratedValue(generator = "system-uuid")
- @GenericGenerator(name = "system-uuid", strategy = "uuid")
  private String uuid    = null;
- @Column(name = "title")
  private String title   = null;
- @Column(name = "comment")
  private String comment = null;
 
  public ToDo() {

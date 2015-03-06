@@ -1,10 +1,10 @@
 package com.t1m0.exmple.microservice.resource.persistence;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Component;
 
 import com.t1m0.exmple.microservice.resource.domain.ToDo;
 
-@RepositoryRestResource(collectionResourceRel = "todo", path = "todo")
-public interface ToDoRepository extends PagingAndSortingRepository<ToDo, String> {
+@Component
+public interface ToDoRepository extends MongoRepository<ToDo, String> {
 }
